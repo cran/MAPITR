@@ -1,13 +1,13 @@
 # MAPITR: MArginal ePIstasis Test for Regions
 
 [![CRAN status badge](https://www.r-pkg.org/badges/version/MAPITR)](https://cran.r-project.org/package=MAPITR)
-[![Travis Build Status](https://travis-ci.org/mturchin20/MAPITR.svg?branch=master)](https://travis-ci.org/mturchin20/MAPITR)
+[![Travis Build Status](https://travis-ci.com/mturchin20/MAPITR.svg?branch=master)](https://travis-ci.com/mturchin20/MAPITR)
 
 The `MAPITR` R package provides accessible functions for running the algorithms described 
 in [Turchin et al. 2020][biorxiv-paper]. `MAPITR` itself is a variance component model that tests
 for marginal epistasis -- the presence of *any* epistatic interactions -- between a given 
 genetic pathway and the rest of the genome. `MAPITR` expects as input a set of genotypes, a 
-single phenotype, and a list of pathways, and returns as output for each pathway a p-value
+single phenotype, and a list of pathways. As output, it returns for each pathway a p-value
 for the test against the null model of there *not* being any interactions between the pathway and 
 the rest of the genome.
 
@@ -42,7 +42,7 @@ install.packages("MAPITR")
 To install the most recent dev version of `MAPITR` from [github](https://github.com/mturchin20/MAPITR):
 ```{r}
 install.packages("devtools")
-devtools::install_github("mturchin20/MAPITR@v1.0.4", build_vignettes=TRUE)
+devtools::install_github("mturchin20/MAPITR@v1.1.0", build_vignettes=TRUE)
 ```
 
 Once you have installed the package, load the package in R:
