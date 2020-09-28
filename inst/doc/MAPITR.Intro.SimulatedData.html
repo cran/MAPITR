@@ -282,12 +282,12 @@ data(MAPITR_SimData_Phenotype, MAPITR_SimData_Genotypes, MAPITR_SimData_Pathways
 <pre><code class="r">head(MAPITR_Output$Results)
 </code></pre>
 
-<pre><code>##      Pathways    pValues        Est        PVE
-## [1,]        1 0.00511314 1.09663702 1.32243728
-## [2,]        2 0.31118083 0.40971253 0.45740085
-## [3,]        3 0.33131510 0.36199437 0.43933281
-## [4,]        4 0.96134690 0.01706105 0.02017861
-## [5,]        5 0.94181499 0.02552678 0.03176702
+<pre><code>##   Pathways    pValues        Est        PVE
+## 1 Pathway1 0.00511314 1.09663702 1.32243728
+## 2 Pathway2 0.31118083 0.40971253 0.45740085
+## 3 Pathway3 0.33131510 0.36199437 0.43933281
+## 4 Pathway4 0.96134690 0.01706105 0.02017861
+## 5 Pathway5 0.94181499 0.02552678 0.03176702
 </code></pre>
 
 <p>The output shown from <code>MAPITR_Output$Results</code> should be a matrix with four columns. The first column should be the list of pathway names being analyzed (same order as input file), the second column should be the <code>MAPITR</code> p-values for each pathway, the third column should be the estimate of the epistatic GRM variance component (\(g_l\) in equation 3 of the <code>MAPITR</code> <a href="http://biorxiv.org/">paper</a>) for each pathway, and the fourth column should be the proportion of variance explained (PVE) for the phenotype by each pathway. Note that PVE estimates here are for pathways that generally contain overlapping variants &ndash; this impacts our interpretation of PVE. When single variant models are used in complex trait analysis, which is often the case, PVE can theoretically sum to 1 across all variants. <em>A priori</em> it is unclear what PVE should theoretically sum to across multiple pathways due to this common scenario where variants are shared across pathway definitions.</p>
@@ -297,8 +297,8 @@ data(MAPITR_SimData_Phenotype, MAPITR_SimData_Genotypes, MAPITR_SimData_Pathways
 <pre><code class="r">MAPITR_Output$Results[MAPITR_Output$Results[,2] &lt; .01,]
 </code></pre>
 
-<pre><code>##   Pathways    pValues        Est        PVE 
-## 1.00000000 0.00511314 1.09663702 1.32243728
+<pre><code>##   Pathways    pValues      Est      PVE
+## 1 Pathway1 0.00511314 1.096637 1.322437
 </code></pre>
 
 <p>Also note this is a simulated dataset made to run quickly for this vignette &ndash; you will very likely need many more individuals and SNPs to identify an epistatic signal, and PVE should never be &gt; 1 in real data.</p>
@@ -330,8 +330,8 @@ data(MAPITR_SimData_Phenotype, MAPITR_SimData_Genotypes, MAPITR_SimData_Pathways
 MAPITR_Output2$Results[MAPITR_Output2$Results[,2] &lt; .01,]
 </code></pre>
 
-<pre><code>##    Pathways     pValues         Est         PVE 
-## 1.000000000 0.002208826 1.212190616 1.479454779
+<pre><code>##   Pathways     pValues      Est      PVE
+## 1 Pathway1 0.002208826 1.212191 1.479455
 </code></pre>
 
 <p>And after doing so, we find that including top principal components does further help refine our epistatic signal in this simulated dataset.</p>

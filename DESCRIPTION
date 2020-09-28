@@ -1,7 +1,7 @@
 Package: MAPITR
 Title: MArginal ePIstasis Test for Regions
-Version: 1.1.1
-Date: 2020-09-21
+Version: 1.1.2
+Date: 2020-09-24
 Authors@R: c(person(given="Michael",family="Turchin",email = "michael_turchin@brown.edu",
                     role=c("aut","cre"), comment=c(ORCID="0000-0003-3569-1529")),
              person(given="Gregory",family="Darnell",email="gbd343@gmail.com", 
@@ -35,7 +35,7 @@ NeedsCompilation: yes
 RoxygenNote: 7.1.1
 VignetteBuilder: knitr
 LinkingTo: Rcpp, RcppArmadillo
-Packaged: 2020-09-21 15:56:22 UTC; mturchin20
+Packaged: 2020-09-25 03:52:13 UTC; mturchin20
 Author: Michael Turchin [aut, cre] (<https://orcid.org/0000-0003-3569-1529>),
   Gregory Darnell [aut, ctb] (<https://orcid.org/0000-0003-0425-940X>),
   Lorin Crawford [aut, ctb] (<https://orcid.org/0000-0003-0178-8242>),
@@ -43,4 +43,4 @@ Author: Michael Turchin [aut, cre] (<https://orcid.org/0000-0003-3569-1529>),
   Peter Carbonetto [ctb] (<https://orcid.org/0000-0003-1144-6780>)
 Maintainer: Michael Turchin <michael_turchin@brown.edu>
 Repository: CRAN
-Date/Publication: 2020-09-23 06:30:07 UTC
+Date/Publication: 2020-09-28 13:20:12 UTC
